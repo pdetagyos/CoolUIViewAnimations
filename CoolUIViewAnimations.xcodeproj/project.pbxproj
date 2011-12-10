@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E90A22A1492E928003D9512 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90A2291492E928003D9512 /* UIKit.framework */; };
+		9E90A22C1492E928003D9512 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90A22B1492E928003D9512 /* Foundation.framework */; };
+		9E90A22E1492E928003D9512 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90A22D1492E928003D9512 /* CoreGraphics.framework */; };
+		9E90A2341492E928003D9512 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E90A2321492E928003D9512 /* InfoPlist.strings */; };
+		9E90A2361492E928003D9512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90A2351492E928003D9512 /* main.m */; };
+		9E90A23A1492E928003D9512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90A2391492E928003D9512 /* AppDelegate.m */; };
+		9E90A23D1492E928003D9512 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90A23C1492E928003D9512 /* ViewController.m */; };
+		9E90A2401492E928003D9512 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E90A23E1492E928003D9512 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9E90A2251492E928003D9512 /* CoolUIViewAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolUIViewAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E90A2291492E928003D9512 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9E90A22B1492E928003D9512 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9E90A22D1492E928003D9512 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9E90A2311492E928003D9512 /* CoolUIViewAnimations-Info.plist */ = {isa = PBXFileReference; path = "CoolUIViewAnimations-Info.plist"; sourceTree = "<group>"; };
+		9E90A2331492E928003D9512 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9E90A2351492E928003D9512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E90A2371492E928003D9512 /* CoolUIViewAnimations-Prefix.pch */ = {isa = PBXFileReference; path = "CoolUIViewAnimations-Prefix.pch"; sourceTree = "<group>"; };
+		9E90A2381492E928003D9512 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		9E90A2391492E928003D9512 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9E90A23B1492E928003D9512 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		9E90A23C1492E928003D9512 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9E90A23F1492E928003D9512 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E90A2221492E928003D9512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E90A22A1492E928003D9512 /* UIKit.framework in Frameworks */,
+				9E90A22C1492E928003D9512 /* Foundation.framework in Frameworks */,
+				9E90A22E1492E928003D9512 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E90A21A1492E928003D9512 = {
+			isa = PBXGroup;
+			children = (
+				9E90A22F1492E928003D9512 /* CoolUIViewAnimations */,
+				9E90A2281492E928003D9512 /* Frameworks */,
+				9E90A2261492E928003D9512 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E90A2261492E928003D9512 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E90A2251492E928003D9512 /* CoolUIViewAnimations.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E90A2281492E928003D9512 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E90A2291492E928003D9512 /* UIKit.framework */,
+				9E90A22B1492E928003D9512 /* Foundation.framework */,
+				9E90A22D1492E928003D9512 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E90A22F1492E928003D9512 /* CoolUIViewAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				9E90A2381492E928003D9512 /* AppDelegate.h */,
+				9E90A2391492E928003D9512 /* AppDelegate.m */,
+				9E90A23B1492E928003D9512 /* ViewController.h */,
+				9E90A23C1492E928003D9512 /* ViewController.m */,
+				9E90A23E1492E928003D9512 /* ViewController.xib */,
+				9E90A2301492E928003D9512 /* Supporting Files */,
+			);
+			path = CoolUIViewAnimations;
+			sourceTree = "<group>";
+		};
+		9E90A2301492E928003D9512 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E90A2311492E928003D9512 /* CoolUIViewAnimations-Info.plist */,
+				9E90A2321492E928003D9512 /* InfoPlist.strings */,
+				9E90A2351492E928003D9512 /* main.m */,
+				9E90A2371492E928003D9512 /* CoolUIViewAnimations-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E90A2241492E928003D9512 /* CoolUIViewAnimations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E90A2431492E928003D9512 /* Build configuration list for PBXNativeTarget "CoolUIViewAnimations" */;
+			buildPhases = (
+				9E90A2211492E928003D9512 /* Sources */,
+				9E90A2221492E928003D9512 /* Frameworks */,
+				9E90A2231492E928003D9512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolUIViewAnimations;
+			productName = CoolUIViewAnimations;
+			productReference = 9E90A2251492E928003D9512 /* CoolUIViewAnimations.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E90A21C1492E928003D9512 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 9E90A21F1492E928003D9512 /* Build configuration list for PBXProject "CoolUIViewAnimations" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9E90A21A1492E928003D9512;
+			productRefGroup = 9E90A2261492E928003D9512 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E90A2241492E928003D9512 /* CoolUIViewAnimations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E90A2231492E928003D9512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E90A2341492E928003D9512 /* InfoPlist.strings in Resources */,
+				9E90A2401492E928003D9512 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E90A2211492E928003D9512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E90A2361492E928003D9512 /* main.m in Sources */,
+				9E90A23A1492E928003D9512 /* AppDelegate.m in Sources */,
+				9E90A23D1492E928003D9512 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9E90A2321492E928003D9512 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E90A2331492E928003D9512 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9E90A23E1492E928003D9512 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E90A23F1492E928003D9512 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E90A2411492E928003D9512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9E90A2421492E928003D9512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E90A2441492E928003D9512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoolUIViewAnimations/CoolUIViewAnimations-Prefix.pch";
+				INFOPLIST_FILE = "CoolUIViewAnimations/CoolUIViewAnimations-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9E90A2451492E928003D9512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoolUIViewAnimations/CoolUIViewAnimations-Prefix.pch";
+				INFOPLIST_FILE = "CoolUIViewAnimations/CoolUIViewAnimations-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E90A21F1492E928003D9512 /* Build configuration list for PBXProject "CoolUIViewAnimations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E90A2411492E928003D9512 /* Debug */,
+				9E90A2421492E928003D9512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E90A2431492E928003D9512 /* Build configuration list for PBXNativeTarget "CoolUIViewAnimations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E90A2441492E928003D9512 /* Debug */,
+				9E90A2451492E928003D9512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E90A21C1492E928003D9512 /* Project object */;
+}
