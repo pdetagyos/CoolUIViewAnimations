@@ -163,6 +163,16 @@ float radiansForDegrees(int degrees) {
 
 #pragma mark - Effects
 
+-(void)changeAlpha:(float)newAlpha secs:(float)secs {
+    [UIView animateWithDuration:secs 
+                          delay:0.0 
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+                         self.alpha = newAlpha;
+                     }
+                     completion:nil];
+}
+
 -(void)pulse:(float)secs continuously:(BOOL)continuously {
     [UIView animateWithDuration:secs/2 
                           delay:0.0 
