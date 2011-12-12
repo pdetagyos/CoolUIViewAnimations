@@ -22,6 +22,7 @@
 @synthesize haloInnerImageView;
 @synthesize drainView;
 @synthesize zoomButton;
+@synthesize scaleView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -59,6 +60,12 @@
     [tapRecognizerDrain setNumberOfTapsRequired:1];
     [self.drainView addGestureRecognizer:tapRecognizerDrain];
 
+    // Setup the gesture recognizer for the scale view
+    UITapGestureRecognizer *tapRecognizerScale = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scaleTransition)] autorelease];
+    [tapRecognizerScale setNumberOfTouchesRequired:1];
+    [tapRecognizerScale setNumberOfTapsRequired:1];
+    [self.scaleView addGestureRecognizer:tapRecognizerScale];
+
 }
 
 - (void)viewDidUnload
@@ -69,6 +76,7 @@
     [self setHaloInnerImageView:nil];
     [self setDrainView:nil];
     [self setZoomButton:nil];
+    [self setScaleView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -107,6 +115,7 @@
     [haloInnerImageView release];
     [drainView release];
     [zoomButton release];
+    [scaleView release];
     [super dealloc];
 }
 
@@ -136,6 +145,15 @@
 
 - (IBAction)zoomIn:(id)sender {
     [self.zoomButton raceTo:CGPointMake(177, 243) withSnapBack:YES];
+}
+
+- (void)scaleTransition {
+    [self.scaleView moveTo:CGPointMake(100, 100) duration:1.0 option:UIViewAnimationCurveEaseInOut delegate:self callback:@selector(transitionCompleted)];
+    [self.scaleView scale:1.0 x:1.5 y:1.5 delegate:nil callback:nil];
+}
+
+- (void)transitionCompleted {
+    NSLog(@"DONE!");
 }
 
 @end

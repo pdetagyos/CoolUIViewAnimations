@@ -20,12 +20,16 @@ float radiansForDegrees(int degrees) {
 
 #pragma mark - Moves
 
-- (void) moveTo:(CGPoint)destination duration:(float)secs option:(UIViewAnimationOptions)option {
+- (void)moveTo:(CGPoint)destination duration:(float)secs option:(UIViewAnimationOptions)option delegate:(id)delegate callback:(SEL)method {
     [UIView animateWithDuration:secs delay:0.0 options:option
                      animations:^{
                          self.frame = CGRectMake(destination.x,destination.y, self.frame.size.width, self.frame.size.height);
                      }
-                     completion:nil];
+                     completion:^(BOOL finished) {
+                         if (delegate != nil) {
+                             [delegate performSelector:method];
+                         }
+                     }];
 }
 
 - (void)raceTo:(CGPoint)destination withSnapBack:(BOOL)withSnapBack {
@@ -79,11 +83,13 @@ float radiansForDegrees(int degrees) {
                          self.transform = CGAffineTransformRotate(self.transform, radiansForDegrees(degrees));
                      }
                      completion:^(BOOL finished) { 
-                         [delegate method];
+                         if (delegate != nil) {
+                             [delegate performSelector:method];
+                         }
                      }];
 }
 
-- (void)scale:(int)degrees secs:(float)secs x:(float)scaleX y:(float)scaleY delegate:(id)delegate callback:(SEL)method {
+- (void)scale:(float)secs x:(float)scaleX y:(float)scaleY delegate:(id)delegate callback:(SEL)method {
     [UIView animateWithDuration:secs 
                           delay:0.0 
                         options:UIViewAnimationOptionCurveLinear
@@ -91,7 +97,9 @@ float radiansForDegrees(int degrees) {
                          self.transform = CGAffineTransformScale(self.transform, scaleX, scaleY);
                      }
                      completion:^(BOOL finished) { 
-                         [delegate method];
+                         if (delegate != nil) {
+                             [delegate performSelector:method];
+                         }
                      }];
 }
 
