@@ -28,6 +28,46 @@ float radiansForDegrees(int degrees) {
                      completion:nil];
 }
 
+- (void)raceTo:(CGPoint)destination withSnapBack:(BOOL)withSnapBack {
+    CGPoint stopPoint = destination;
+    if (withSnapBack) {
+        // Determine our stop point, from which we will "snap back" to the final destination
+        int diffx = destination.x - self.frame.origin.x;
+        int diffy = destination.y - self.frame.origin.y;
+        if (diffx < 0) {
+            // Destination is to the left of current position
+            stopPoint.x -= 10.0;
+        } else if (diffx > 0) {
+            stopPoint.x += 10.0;
+        }
+        if (diffy < 0) {
+            // Destination is to the left of current position
+            stopPoint.y -= 10.0;
+        } else if (diffy > 0) {
+            stopPoint.y += 10.0;
+        }
+    }
+    
+    // Do the animation
+    [UIView animateWithDuration:0.5 
+                          delay:0.0 
+                        options:UIViewAnimationCurveEaseIn
+                     animations:^{
+                         self.frame = CGRectMake(stopPoint.x, stopPoint.y, self.frame.size.width, self.frame.size.height);
+                     }
+                     completion:^(BOOL finished) {
+                         if (withSnapBack) {
+                             [UIView animateWithDuration:0.2 
+                                                   delay:0.0 
+                                                 options:UIViewAnimationCurveLinear
+                                              animations:^{
+                                                  self.frame = CGRectMake(destination.x, destination.y, self.frame.size.width, self.frame.size.height);
+                                              }
+                                              completion:nil];
+                         }
+                     }];    
+}
+
 
 #pragma mark - Transforms
 

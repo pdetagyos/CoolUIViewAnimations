@@ -21,6 +21,7 @@
 @synthesize haloImageView;
 @synthesize haloInnerImageView;
 @synthesize drainView;
+@synthesize zoomButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -67,6 +68,7 @@
     [self setHaloImageView:nil];
     [self setHaloInnerImageView:nil];
     [self setDrainView:nil];
+    [self setZoomButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -104,6 +106,7 @@
     [haloImageView release];
     [haloInnerImageView release];
     [drainView release];
+    [zoomButton release];
     [super dealloc];
 }
 
@@ -125,6 +128,14 @@
 
 - (void)drainAway {
     [self.drainView drainAway:3];
+}
+
+- (IBAction)zoomOut:(id)sender {
+    [self.zoomButton raceTo:CGPointMake(-133, 243) withSnapBack:NO];    
+}
+
+- (IBAction)zoomIn:(id)sender {
+    [self.zoomButton raceTo:CGPointMake(177, 243) withSnapBack:YES];
 }
 
 @end

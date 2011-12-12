@@ -15,5 +15,8 @@
 @property (retain, nonatomic) IBOutlet UIImageView *haloImageView;
 @property (retain, nonatomic) IBOutlet UIImageView *haloInnerImageView;
 @property (retain, nonatomic) IBOutlet UIView *drainView;
+@property (retain, nonatomic) IBOutlet UIButton *zoomButton;
 
+- (IBAction)zoomIn:(id)sender;
+- (IBAction)zoomOut:(id)sender;
 @end
