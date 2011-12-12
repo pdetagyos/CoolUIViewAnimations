@@ -14,5 +14,6 @@
 @property (retain, nonatomic) IBOutlet UIView *haloView;
 @property (retain, nonatomic) IBOutlet UIImageView *haloImageView;
 @property (retain, nonatomic) IBOutlet UIImageView *haloInnerImageView;
+@property (retain, nonatomic) IBOutlet UIView *drainView;
 
 @end

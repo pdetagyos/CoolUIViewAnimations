@@ -24,6 +24,7 @@ float radiansForDegrees(int degrees);
 // Transitions
 - (void)curlDown:(float)secs;
 - (void)curlUpAndAway:(float)secs;
+- (void)drainAway:(float)secs;
 
 // Effects
 -(void)pulse:(float)secs continuously:(BOOL)continuously;

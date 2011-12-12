@@ -20,6 +20,7 @@
 @synthesize haloView;
 @synthesize haloImageView;
 @synthesize haloInnerImageView;
+@synthesize drainView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -50,6 +51,13 @@
     [tapRecognizer setNumberOfTouchesRequired:1];
     [tapRecognizer setNumberOfTapsRequired:1];
     [self.haloView addGestureRecognizer:tapRecognizer];
+    
+    // Setup the gesture recognizer for the drain view
+    UITapGestureRecognizer *tapRecognizerDrain = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(drainAway)] autorelease];
+    [tapRecognizerDrain setNumberOfTouchesRequired:1];
+    [tapRecognizerDrain setNumberOfTapsRequired:1];
+    [self.drainView addGestureRecognizer:tapRecognizerDrain];
+
 }
 
 - (void)viewDidUnload
@@ -58,6 +66,7 @@
     [self setHaloView:nil];
     [self setHaloImageView:nil];
     [self setHaloInnerImageView:nil];
+    [self setDrainView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -94,6 +103,7 @@
     [haloView release];
     [haloImageView release];
     [haloInnerImageView release];
+    [drainView release];
     [super dealloc];
 }
 
@@ -111,6 +121,10 @@
     [self.haloImageView pulse:2.0 continuously:YES];
     self.haloInnerImageView.alpha = 1.0;
     [self.haloInnerImageView spinCounterClockwise:3.0];
+}
+
+- (void)drainAway {
+    [self.drainView drainAway:3];
 }
 
 @end

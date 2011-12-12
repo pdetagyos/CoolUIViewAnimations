@@ -96,6 +96,22 @@ float radiansForDegrees(int degrees) {
                     completion:nil];
 }
 
+- (void)drainAway:(float)secs {
+	NSTimer *timer;
+    self.tag = 20;
+	timer = [NSTimer scheduledTimerWithTimeInterval:secs/50 target:self selector:@selector(drainTimer:) userInfo:nil repeats:YES];
+}
+
+- (void)drainTimer:(NSTimer*)timer {
+	CGAffineTransform trans = CGAffineTransformRotate(CGAffineTransformScale(self.transform, 0.9, 0.9),0.314);
+	self.transform = trans;
+	self.alpha = self.alpha * 0.98;
+	self.tag = self.tag - 1;
+	if (self.tag <= 0) {
+		[timer invalidate];
+		[self removeFromSuperview];
+	}
+}
 
 #pragma mark - Effects
 
