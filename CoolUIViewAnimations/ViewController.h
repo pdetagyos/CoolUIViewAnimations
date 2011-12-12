@@ -10,4 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (retain, nonatomic) IBOutlet UIView *curlView;
+@property (retain, nonatomic) IBOutlet UIView *haloView;
+@property (retain, nonatomic) IBOutlet UIImageView *haloImageView;
+@property (retain, nonatomic) IBOutlet UIImageView *haloInnerImageView;
+
 @end

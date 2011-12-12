@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1217C61493E74800ADA815 /* startburstOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1217C21493E74800ADA815 /* startburstOrange.png */; };
+		9E1217C71493E74800ADA815 /* startburstOrange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1217C31493E74800ADA815 /* startburstOrange@2x.png */; };
+		9E1217C81493E74800ADA815 /* startburstRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1217C41493E74800ADA815 /* startburstRed.png */; };
+		9E1217C91493E74800ADA815 /* startburstRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1217C51493E74800ADA815 /* startburstRed@2x.png */; };
 		9E90A22A1492E928003D9512 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90A2291492E928003D9512 /* UIKit.framework */; };
 		9E90A22C1492E928003D9512 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90A22B1492E928003D9512 /* Foundation.framework */; };
 		9E90A22E1492E928003D9512 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E90A22D1492E928003D9512 /* CoreGraphics.framework */; };
@@ -15,22 +19,29 @@
 		9E90A23A1492E928003D9512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90A2391492E928003D9512 /* AppDelegate.m */; };
 		9E90A23D1492E928003D9512 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90A23C1492E928003D9512 /* ViewController.m */; };
 		9E90A2401492E928003D9512 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E90A23E1492E928003D9512 /* ViewController.xib */; };
+		9E90A24E1493B2F9003D9512 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E90A24D1493B2F9003D9512 /* UIView+Animation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E1217C21493E74800ADA815 /* startburstOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startburstOrange.png; sourceTree = "<group>"; };
+		9E1217C31493E74800ADA815 /* startburstOrange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startburstOrange@2x.png"; sourceTree = "<group>"; };
+		9E1217C41493E74800ADA815 /* startburstRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startburstRed.png; sourceTree = "<group>"; };
+		9E1217C51493E74800ADA815 /* startburstRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startburstRed@2x.png"; sourceTree = "<group>"; };
 		9E90A2251492E928003D9512 /* CoolUIViewAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolUIViewAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E90A2291492E928003D9512 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9E90A22B1492E928003D9512 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9E90A22D1492E928003D9512 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9E90A2311492E928003D9512 /* CoolUIViewAnimations-Info.plist */ = {isa = PBXFileReference; path = "CoolUIViewAnimations-Info.plist"; sourceTree = "<group>"; };
+		9E90A2311492E928003D9512 /* CoolUIViewAnimations-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoolUIViewAnimations-Info.plist"; sourceTree = "<group>"; };
 		9E90A2331492E928003D9512 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9E90A2351492E928003D9512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9E90A2371492E928003D9512 /* CoolUIViewAnimations-Prefix.pch */ = {isa = PBXFileReference; path = "CoolUIViewAnimations-Prefix.pch"; sourceTree = "<group>"; };
-		9E90A2381492E928003D9512 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		9E90A2371492E928003D9512 /* CoolUIViewAnimations-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoolUIViewAnimations-Prefix.pch"; sourceTree = "<group>"; };
+		9E90A2381492E928003D9512 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E90A2391492E928003D9512 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9E90A23B1492E928003D9512 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		9E90A23B1492E928003D9512 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9E90A23C1492E928003D9512 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9E90A23F1492E928003D9512 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9E90A24C1493B2F9003D9512 /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		9E90A24D1493B2F9003D9512 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +90,12 @@
 			children = (
 				9E90A2381492E928003D9512 /* AppDelegate.h */,
 				9E90A2391492E928003D9512 /* AppDelegate.m */,
+				9E90A24C1493B2F9003D9512 /* UIView+Animation.h */,
+				9E90A24D1493B2F9003D9512 /* UIView+Animation.m */,
 				9E90A23B1492E928003D9512 /* ViewController.h */,
 				9E90A23C1492E928003D9512 /* ViewController.m */,
 				9E90A23E1492E928003D9512 /* ViewController.xib */,
+				9E90A2461492F228003D9512 /* images */,
 				9E90A2301492E928003D9512 /* Supporting Files */,
 			);
 			path = CoolUIViewAnimations;
@@ -96,6 +110,17 @@
 				9E90A2371492E928003D9512 /* CoolUIViewAnimations-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E90A2461492F228003D9512 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9E1217C21493E74800ADA815 /* startburstOrange.png */,
+				9E1217C31493E74800ADA815 /* startburstOrange@2x.png */,
+				9E1217C41493E74800ADA815 /* startburstRed.png */,
+				9E1217C51493E74800ADA815 /* startburstRed@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +175,10 @@
 			files = (
 				9E90A2341492E928003D9512 /* InfoPlist.strings in Resources */,
 				9E90A2401492E928003D9512 /* ViewController.xib in Resources */,
+				9E1217C61493E74800ADA815 /* startburstOrange.png in Resources */,
+				9E1217C71493E74800ADA815 /* startburstOrange@2x.png in Resources */,
+				9E1217C81493E74800ADA815 /* startburstRed.png in Resources */,
+				9E1217C91493E74800ADA815 /* startburstRed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +192,7 @@
 				9E90A2361492E928003D9512 /* main.m in Sources */,
 				9E90A23A1492E928003D9512 /* AppDelegate.m in Sources */,
 				9E90A23D1492E928003D9512 /* ViewController.m in Sources */,
+				9E90A24E1493B2F9003D9512 /* UIView+Animation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +267,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolUIViewAnimations/CoolUIViewAnimations-Prefix.pch";
 				INFOPLIST_FILE = "CoolUIViewAnimations/CoolUIViewAnimations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -248,6 +279,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoolUIViewAnimations/CoolUIViewAnimations-Prefix.pch";
 				INFOPLIST_FILE = "CoolUIViewAnimations/CoolUIViewAnimations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -272,6 +304,7 @@
 				9E90A2451492E928003D9512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

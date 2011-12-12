@@ -6,9 +6,20 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
+// Code examples from:
+// http://www.raywenderlich.com/2454/how-to-use-uiview-animation-tutorial
+// http://www.raywenderlich.com/5478/uiview-animation-tutorial-practical-recipes
+// and my brain!
+
 #import "ViewController.h"
 
+#import "UIView+Animation.h"
+
 @implementation ViewController
+@synthesize curlView;
+@synthesize haloView;
+@synthesize haloImageView;
+@synthesize haloInnerImageView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -22,10 +33,31 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Setup the gesture recognizers for the curl view
+    UISwipeGestureRecognizer *curlUpRecognizer = 
+    [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(curlViewDisappear)] autorelease];
+    [curlUpRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
+    [self.curlView addGestureRecognizer:curlUpRecognizer];
+
+    UISwipeGestureRecognizer *curlDownRecognizer = 
+    [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(curlViewAppear)] autorelease];
+    [curlDownRecognizer setDirection:UISwipeGestureRecognizerDirectionDown];
+    [[self view] addGestureRecognizer:curlDownRecognizer];
+    
+    // Setup the gesture recognizer for the halo view
+    UITapGestureRecognizer *tapRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(haloViewEffect)] autorelease];
+    [tapRecognizer setNumberOfTouchesRequired:1];
+    [tapRecognizer setNumberOfTapsRequired:1];
+    [self.haloView addGestureRecognizer:tapRecognizer];
 }
 
 - (void)viewDidUnload
 {
+    [self setCurlView:nil];
+    [self setHaloView:nil];
+    [self setHaloImageView:nil];
+    [self setHaloInnerImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -55,6 +87,30 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void)dealloc {
+    [curlView release];
+    [haloView release];
+    [haloImageView release];
+    [haloInnerImageView release];
+    [super dealloc];
+}
+
+- (void)curlViewAppear {
+    [self.curlView curlDown:0.5];
+}
+
+- (void)curlViewDisappear {
+    [self.curlView curlUpAndAway:0.5];
+}
+
+- (void)haloViewEffect {
+    self.haloImageView.alpha = 1.0;
+    [self.haloImageView spinClockwise:5.0];
+    [self.haloImageView pulse:2.0 continuously:YES];
+    self.haloInnerImageView.alpha = 1.0;
+    [self.haloInnerImageView spinCounterClockwise:3.0];
 }
 
 @end
