@@ -3,7 +3,7 @@
 //  CoolUIViewAnimations
 //
 //  Created by Peter de Tagyos on 12/10/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 PT Software Solutions. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -28,6 +28,7 @@ float radiansForDegrees(int degrees);
 - (void)drainAway:(float)secs;
 
 // Effects
--(void)pulse:(float)secs continuously:(BOOL)continuously;
+- (void)changeAlpha:(float)newAlpha secs:(float)secs;
+- (void)pulse:(float)secs continuously:(BOOL)continuously;
 
 @end

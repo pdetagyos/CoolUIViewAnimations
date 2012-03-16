@@ -3,7 +3,7 @@
 //  CoolUIViewAnimations
 //
 //  Created by Peter de Tagyos on 12/10/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 PT Software Solutions. All rights reserved.
 //
 
 #import "UIView+Animation.h"
@@ -53,7 +53,7 @@ float radiansForDegrees(int degrees) {
     }
     
     // Do the animation
-    [UIView animateWithDuration:0.5 
+    [UIView animateWithDuration:0.3 
                           delay:0.0 
                         options:UIViewAnimationCurveEaseIn
                      animations:^{
@@ -61,7 +61,7 @@ float radiansForDegrees(int degrees) {
                      }
                      completion:^(BOOL finished) {
                          if (withSnapBack) {
-                             [UIView animateWithDuration:0.2 
+                             [UIView animateWithDuration:0.1 
                                                    delay:0.0 
                                                  options:UIViewAnimationCurveLinear
                                               animations:^{
@@ -163,7 +163,7 @@ float radiansForDegrees(int degrees) {
 
 #pragma mark - Effects
 
--(void)changeAlpha:(float)newAlpha secs:(float)secs {
+- (void)changeAlpha:(float)newAlpha secs:(float)secs {
     [UIView animateWithDuration:secs 
                           delay:0.0 
                         options:UIViewAnimationOptionCurveLinear
@@ -173,7 +173,7 @@ float radiansForDegrees(int degrees) {
                      completion:nil];
 }
 
--(void)pulse:(float)secs continuously:(BOOL)continuously {
+- (void)pulse:(float)secs continuously:(BOOL)continuously {
     [UIView animateWithDuration:secs/2 
                           delay:0.0 
                         options:UIViewAnimationOptionCurveLinear
