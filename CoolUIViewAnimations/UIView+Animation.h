@@ -13,8 +13,10 @@ float radiansForDegrees(int degrees);
 @interface UIView (Animation)
 
 // Moves
+- (void)moveTo:(CGPoint)destination duration:(float)secs option:(UIViewAnimationOptions)option;
 - (void)moveTo:(CGPoint)destination duration:(float)secs option:(UIViewAnimationOptions)option delegate:(id)delegate callback:(SEL)method;
 - (void)raceTo:(CGPoint)destination withSnapBack:(BOOL)withSnapBack;
+- (void)raceTo:(CGPoint)destination withSnapBack:(BOOL)withSnapBack delegate:(id)delegate callback:(SEL)method;
 
 // Transforms
 - (void)rotate:(int)degrees secs:(float)secs delegate:(id)delegate callback:(SEL)method;

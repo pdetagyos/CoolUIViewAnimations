@@ -20,6 +20,10 @@ float radiansForDegrees(int degrees) {
 
 #pragma mark - Moves
 
+- (void)moveTo:(CGPoint)destination duration:(float)secs option:(UIViewAnimationOptions)option {
+    [self moveTo:destination duration:secs option:option delegate:nil callback:nil];
+}
+
 - (void)moveTo:(CGPoint)destination duration:(float)secs option:(UIViewAnimationOptions)option delegate:(id)delegate callback:(SEL)method {
     [UIView animateWithDuration:secs delay:0.0 options:option
                      animations:^{
@@ -33,6 +37,10 @@ float radiansForDegrees(int degrees) {
 }
 
 - (void)raceTo:(CGPoint)destination withSnapBack:(BOOL)withSnapBack {
+    [self raceTo:destination withSnapBack:withSnapBack delegate:nil callback:nil];
+}
+
+- (void)raceTo:(CGPoint)destination withSnapBack:(BOOL)withSnapBack delegate:(id)delegate callback:(SEL)method {
     CGPoint stopPoint = destination;
     if (withSnapBack) {
         // Determine our stop point, from which we will "snap back" to the final destination
@@ -67,9 +75,13 @@ float radiansForDegrees(int degrees) {
                                               animations:^{
                                                   self.frame = CGRectMake(destination.x, destination.y, self.frame.size.width, self.frame.size.height);
                                               }
-                                              completion:nil];
+                                              completion:^(BOOL finished) {
+                                                  [delegate performSelector:method];
+                                              }];
+                         } else {
+                             [delegate performSelector:method];
                          }
-                     }];    
+                     }];        
 }
 
 
